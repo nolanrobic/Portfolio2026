@@ -1,20 +1,296 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test page</title>
-</head>
-<body>
-    <h1>Nolan, mon portfolio</h1>
-    <h2>Design</h2>
-    <h2>Illustration</h2>
-    <h2>Photographie</h2>
-    <h2>All Work</h2>
+<html lang="fr">
 
-    <h2>Profile</h2>
-    <h2>Contact</h2>
-    <h2>Tinah le goat</h2>
-    <h2>TEST</h2>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nolan R. | Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="img/favicon_io/favicon-32x32.png">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="container">
+      <a href="#" class="logo">Nolan<span>R.</span></a>
+      <div class="links">
+        <ul>
+          <li><a href="#accueil" class="nav-link nav-accueil">Accueil</a></li>
+          <li><a href="#portfolio" class="nav-link nav-projets">Projets</a></li>
+          <li><a href="#a-propos" class="nav-link nav-apropos">À propos</a></li>
+          <li><a href="#contact" class="nav-link nav-contact">Contact</a></li>
+          <button id="lang-btn" class="btn-lang">EN</button>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" id="accueil">
+      <div class="hero-content">
+        <h1 class="txt-titre">Découvrez mon univers</h1>
+        <p class="txt-subtitle">Bienvenue sur mon portfolio !</p>
+        <p class="description txt-description">
+          Passionné et créatif, je suis ravi de vous partager mes travaux et de vous faire découvrir mes projets !
+          Explorez mes créations et mes compétences à travers mes différentes collections.
+        </p>
+        <a href="#portfolio" class="btn-cta txt-btn-projets">Voir mes projets <i class="uil uil-arrow-down"></i></a>
+      </div>
+      <div class="hero-img">
+        <img src="img/Toronto1.webp" alt="Vue de Toronto - Nolan R. Portfolio">
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <div class="main-text">
+        <p class="portfolio-sub">Portfolio</p>
+        <h2 class="portfolio-title"><span>Derniers</span> Projets</h2>
+      </div>
+
+      <div class="portfolio-content">
+
+        <div class="row" onclick="openOverlay('overlay-projet1')">
+          <img src="img/argentique1.webp" class="present" alt="Collection argentique Partir en fumée">
+          <div class="calque">
+            <h5 class="p1-grid-title">Partir en fumée</h5>
+            <p class="p1-grid-sub">Collection argentique</p>
+            <button class="open-overlay-btn"><img src="img/link.webp" alt="Lien"></button>
+          </div>
+        </div>
+
+        <div class="row" onclick="openOverlay('overlay-projet2')">
+          <img src="img/geoje1.webp" class="present" alt="Création de site internet et jeu">
+          <div class="calque">
+            <h5 class="p2-grid-title">Documentaire en Corée du Sud</h5>
+            <p class="p2-grid-sub">Tournage et post-production</p>
+            <button class="open-overlay-btn"><img src="img/link.webp" alt="Lien"></button>
+          </div>
+        </div>
+
+        <div class="row" onclick="openOverlay('overlay-projet3')">
+          <img src="img/cookie.webp" class="present" alt="Création de site internet et jeu">
+          <div class="calque">
+            <h5 class="p3-grid-title">Création de site</h5>
+            <p class="p3-grid-sub">Site internet et jeu</p>
+            <button class="open-overlay-btn"><img src="img/link.webp" alt="Lien"></button>
+          </div>
+        </div>
+
+        <div class="row" onclick="openOverlay('overlay-projet4')">
+          <img src="img/atelier.webp" class="present" alt="Atelier photographique autour de l'appareil">
+          <div class="calque">
+            <h5 class="p4-grid-title">Atelier photographique</h5>
+            <p class="p4-grid-sub">Travail autour de l'appareil</p>
+            <button class="open-overlay-btn"><img src="img/link.webp" alt="Lien"></button>
+          </div>
+        </div>
+
+        <div class="row" onclick="openOverlay('overlay-projet5')">
+          <img src="img/album.webp" class="present" alt="Design et projets numériques">
+          <div class="calque">
+            <h5 class="p5-grid-title">Design</h5>
+            <p class="p5-grid-sub">Projets numériques</p>
+            <button class="open-overlay-btn"><img src="img/link.webp" alt="Lien"></button>
+          </div>
+        </div>
+
+        <div class="row" onclick="openOverlay('overlay-projet6')">
+          <img src="img/esp.webp" class="present" alt="Collection personnelle Voyager">
+          <div class="calque">
+            <h5 class="p6-grid-title">Voyager</h5>
+            <p class="p6-grid-sub">Collection personnelle</p>
+            <button class="open-overlay-btn"><img src="img/link.webp" alt="Lien"></button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div id="overlay-projet1" class="project-overlay" onclick="closeOverlayOutside(event, 'overlay-projet1')">
+      <div class="overlay-content" onclick="event.stopPropagation()">
+        <span class="close-overlay-btn" onclick="closeOverlay(event, 'overlay-projet1')">&times;</span>
+        <h2 class="p1-title">Partir en fumée</h2>
+        <p class="project-category p1-cat">Collection argentique</p>
+        <div class="overlay-grid">
+          <div class="overlay-media"><img src="img/argentique1.webp" alt="Partir en fumée"></div>
+          <div class="overlay-text">
+            <h3 class="p1-about-title">À propos du projet</h3>
+            <p class="p1-about-txt">Série de photographies argentiques au Canada explorant le noir et blanc et les textures. Ce projet consistait à brûler une pellicule une fois développée.</p>
+          </div>
+        </div>
+        <div class="overlay-collection">
+          <h3 class="p1-coll-title">Aperçu de la collection</h3>
+          <p class="collection-desc p1-coll-desc">Découvrez d'autres clichés issus de cette série photographique :</p>
+          <div class="collection-grid">
+            <img src="img/argentique2.webp" alt="Cliché 1" onclick="zoomImage(event, this)">
+            <img src="img/argentique3.webp" alt="Cliché 2" onclick="zoomImage(event, this)">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="overlay-projet2" class="project-overlay" onclick="closeOverlayOutside(event, 'overlay-projet2')">
+      <div class="overlay-content" onclick="event.stopPropagation()">
+        <span class="close-overlay-btn" onclick="closeOverlay(event, 'overlay-projet2')">&times;</span>
+        <h2 class="p2-title">Documentaire en Corée du Sud</h2>
+        <p class="project-category p2-cat">Tournage et post-production</p>
+        <div class="overlay-grid">
+          <div class="overlay-media">
+            <div style="padding:56.25% 0 0 0; position:relative; width:100%;">
+              <iframe src="https://player.vimeo.com/video/1203265070?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                      frameborder="0"
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                      referrepolicy="strict-origin-when-cross-origin"
+                      style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:8px;"
+                      title="Geoje - Chapitre 1 : Un tour en mer">
+              </iframe>
+            </div>
+          </div>
+          <div class="overlay-text">
+            <h3 class="p2-about-title">À propos du projet</h3>
+            <p class="p2-about-txt">Dans le cadre de mon master nous nous sommes rendus en Corée du Sud pour tourner un documentaire sur la pêche et la ruralité.</p>
+          </div>
+        </div>
+        <div class="overlay-collection">
+          <h3 class="p2-coll-title">Photos du tournage</h3>
+          <p class="collection-desc p2-coll-desc">Clichés de notre tournage à Geoje :</p>
+          <div class="collection-grid">
+            <img src="img/geoje2.webp" alt="Interface jeu" onclick="zoomImage(event, this)">
+            <img src="img/geoje3.webp" alt="Maquette design" onclick="zoomImage(event, this)">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="overlay-projet3" class="project-overlay" onclick="closeOverlayOutside(event, 'overlay-projet3')">
+      <div class="overlay-content" onclick="event.stopPropagation()">
+        <span class="close-overlay-btn" onclick="closeOverlay(event, 'overlay-projet3')">&times;</span>
+        <h2 class="p3-title">Création de site</h2>
+        <p class="project-category p3-cat">Site internet et jeu</p>
+        <div class="overlay-grid">
+          <div class="overlay-media">
+            <img src="img/cookie.webp" alt="Une Nuit à Toronto">
+          </div>
+          <div class="overlay-text">
+            <h3 class="p3-about-title">À propos du projet</h3>
+            <p class="p3-about-txt">Création de jeux et de sites internet dans le cadre de mes formations. "Cookie clicker", "platform game" ainsi que la participation à la Nuit de l'Info.</p>
+          </div>
+        </div>
+        <div class="overlay-collection">
+          <h3 class="p3-coll-title">Explorer davantage de projet</h3>
+          <p class="collection-desc p3-coll-desc">Projet escape game réaliser sur Max</p>
+          <div class="collection-grid">
+            <img src="img/2.webp" alt="Test Zoom 1" onclick="zoomImage(event, this)">
+            <img src="img/3.webp" alt="Zoom 2" onclick="zoomImage(event, this)">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="overlay-projet4" class="project-overlay" onclick="closeOverlayOutside(event, 'overlay-projet4')">
+      <div class="overlay-content" onclick="event.stopPropagation()">
+        <span class="close-overlay-btn" onclick="closeOverlay(event, 'overlay-projet4')">&times;</span>
+        <h2 class="p4-title">Atelier photographique</h2>
+        <p class="project-category p4-cat">Travail autour de l'appareil</p>
+        <div class="overlay-grid">
+          <div class="overlay-media"><img src="img/atelier.webp" alt="Atelier photographique"></div>
+          <div class="overlay-text">
+            <h3 class="p4-about-title">À propos du projet</h3>
+            <p class="p4-about-txt">A la découverte de l'appareil photographique, des techniques et de la retouche d'image. Premiers pas dans le monde photographique.</p>
+          </div>
+        </div>
+        <div class="overlay-collection">
+          <h3 class="p4-coll-title">Aperçu de la collection</h3>
+          <p class="collection-desc p4-coll-desc">Découvrez plus de clichés :</p>
+          <div class="collection-grid">
+            <img src="img/atelier3.webp" alt="Coulisses 1" onclick="zoomImage(event, this)">
+            <img src="img/Toronto.webp" alt="Coulisses 2" onclick="zoomImage(event, this)">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="overlay-projet5" class="project-overlay" onclick="closeOverlayOutside(event, 'overlay-projet5')">
+      <div class="overlay-content" onclick="event.stopPropagation()">
+        <span class="close-overlay-btn" onclick="closeOverlay(event, 'overlay-projet5')">&times;</span>
+        <h2 class="p5-title">Design</h2>
+        <p class="project-category p5-cat">Projets numériques</p>
+        <div class="overlay-grid">
+          <div class="overlay-media"><img src="img/album.webp" alt="Design"></div>
+          <div class="overlay-text">
+            <h3 class="p5-about-title">À propos du projet</h3>
+            <p class="p5-about-txt">Création graphique et artistique pour maquettes d'albums, interfaces numériques, logo et produits.</p>
+          </div>
+        </div>
+        <div class="overlay-collection">
+          <h3 class="p5-coll-title">Plus de projets</h3>
+          <p class="collection-desc p5-coll-desc">Déclinaisons graphiques et design :</p>
+          <div class="collection-grid">
+            <img src="img/space3.webp" alt="Recherche 1" onclick="zoomImage(event, this)">
+            <img src="img/nuitinfo.webp" alt="Recherche 2" onclick="zoomImage(event, this)">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="overlay-projet6" class="project-overlay" onclick="closeOverlayOutside(event, 'overlay-projet6')">
+      <div class="overlay-content" onclick="event.stopPropagation()">
+        <span class="close-overlay-btn" onclick="closeOverlay(event, 'overlay-projet6')">&times;</span>
+        <h2 class="p6-title">Voyager</h2>
+        <p class="project-category p6-cat">Collection personnelle</p>
+        <div class="overlay-grid">
+          <div class="overlay-media"><img src="img/esp.webp" alt="Voyager"></div>
+          <div class="overlay-text">
+            <h3 class="p6-about-title">À propos du projet</h3>
+            <p class="p6-about-txt">Carnet de voyage visuel regroupant des clichés pris aux quatre coins du globe : Canada, Espagne, Corée du Sud...</p>
+          </div>
+        </div>
+        <div class="overlay-collection">
+          <h3 class="p6-coll-title">Aperçu de la collection</h3>
+          <p class="collection-desc p6-coll-desc">Sélection de clichés :</p>
+          <div class="collection-grid">
+            <img src="img/coree1.webp" alt="Voyage 1" onclick="zoomImage(event, this)">
+            <img src="img/Toronto1.webp" alt="Voyage 2" onclick="zoomImage(event, this)">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="apropos" id="a-propos">
+      <div class="apropos-text">
+        <h2 class="about-title"><span>À propos</span> de moi</h2>
+        <p class="about-txt">Actuellement en Master Cultures et Métiers du Web, titulaire d'une Licence EVMAN et d'un DUT MMI, j'ai su développer ma créativité et mon approche des nouvelles technologies. A la recherche de nouvelles compétences, j'ai toujours fait appel à ma curiosité et à mon savoir-faire pour mener à bien mes différents projets. Ce site a pour but de mettre en avant mes travaux et les partager.</p>
+      </div>
+      <div class="apropos-img">
+        <img src="img/moi.webp" alt="Nolan au travail">
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-text">
+        <h2 class="contact-title">Contactez-<span>moi</span></h2>
+        <p class="contact-txt">N'hésitez pas à me contacter pour toute collaboration ou information complémentaire sur mon travail.</p>
+      </div>
+      <div class="contact-form">
+        <a href="robic.nolan@gmail.com" class="contact-btn">Envoyer un e-mail</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p class="footer-rights">&copy; 2026 Nolan R. Tous droits réservés.</p>
+      <div class="mentions-legales">
+        <p class="footer-legal"><strong>Mentions Légales :</strong> Hébergé par GitHub Pages. Ce site utilise l'IA générative comme outil d'assistance au développement</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
